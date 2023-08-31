@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registerworker</title>
+
+    <!-- css -->
+    
+    <link rel="stylesheet" href="static/registerworker.css">
+    <!-- Boxicons CSS (1) -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <section class="container forms ">
+       <div class="form login">
+        <div class="form-content">
+            <header>Sign In/ साइनइन</header>
+            <form action="/registerworker" method="post">
+                <div class="mb-3" >
+                    <div class="mb">
+                      <label for="name" class="form-label">Username*/वापरकर्तानाव*/ उपयोगकर्ता नाम*<span class="mb-3-text-muted"></span> </label>
+                    </div>
+                    <div class="content">
+                      <input type="text" placeholder="Username/वापरकर्तानाव/ उपयोगकर्ता नाम" class="form-control"  name="username" >
+                    </div>   
+                  </div>
+                  <div class="mb-3" >
+                    <!-- <div class="mb">
+                      <label for="name" class="form-label">ID No.*<span class="mb-3-text-muted"></span> </label>
+                    </div>
+                    <div class="feild input-feild">
+                        <input type="Id no." placeholder="ID NO." class="input">
+                    </div>   
+                  </div> -->
+                  <div class="mb-3">
+                    <div class="mb">
+                      <label for="password" class="form-label">Password*/पासवर्ड*/पासवर्ड*<span class="mb-3-text-muted"></span></label>
+                    </div>
+                    <div class="content">
+                      <input type="password" placeholder="Password*/पासवर्ड*/पासवर्ड*" class="form-control" id="password" name="password" style="font-size: 20px;" >
+                    </div>
+                  
+                  </div>
+
+                  <div class="mb-3">
+                    <div class="mb">
+                      <label for="confirmation" class="form-label">Confirm Password*/पासवर्डची पुष्टी करा*/पासवर्ड की पुष्टि कीजिये*<span class="mb-3-text-muted"></span></label>
+                    </div>
+                    <div class="content">
+                      <input type="password" placeholder="Password*/पासवर्ड*/पासवर्ड*" class="form-control" id="confirmation" name="confirmation" style="font-size: 20px;" >
+                    </div>
+                  
+                  </div>
+                  
+                <!-- <div class="feild input-feild">
+                    <input type="password" placeholder="Password" class="password">
+                    <i class="bx bx-hide eye-icon"></i>
+                </div>
+
+                <div class="form-link">
+                    <a href="#" class="forget-pass">Forget password?</a>
+                </div> -->
+                <div class="feild button-feild">
+                    <button>signin/साइनइन</button>
+                </div>
+                <div class="form-link">
+                    
+                    <span>Does not exist account?/खाते अस्तित्वात नाही का?/खाता मौजूद नहीं है?<a href="/loginworker" class="link signup-link">Login/लॉगिन</a> </span>
+                </div>
+            </form>
+        </div>
+        
+    
+        <!-- Signup form -->
+
+      
+    </section>
+    <!-- Javascript -->
+    <script src="sign1.js"></script>
+</body>
+</html>

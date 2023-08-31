@@ -1,0 +1,189 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST WORK</title>
+    <link rel="stylesheet" href="static/client_details.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body style="background-color:var(accent-color);">
+  <nav>
+    <div class="container main-nav flex">  
+        <a href="" class="company-logo">  
+            <img src="static/logofinal.png"  alt="company-logo">  
+           
+        </a>
+        <div class="nav-links">
+            <ul class="flex">
+                <li><a href="#" class="hover-link">Homepage</a></li>
+                <li><a href="#" class="hover-link">About us</a></li>
+                <li><a href="/workerdashboard" class="hover-link">Dashboard</a></li>
+             
+              
+                <li><a href="#" class="hover-link secondary-button">Sign in</a></li>
+                <li><a href="#" class="hover-link primary-button">Sign up</a></li>
+            </ul>
+  
+        </div>
+    </div>
+  
+  </nav>
+    <div class="container form-container">
+        <div class="main">
+
+           
+             <form action="/postwork" method="post">
+                <div class="mb-3">
+                    
+                  <select name="services" id="services">
+                    <option disable selected> Choose Category of Work</option> 
+                    <option value="Electrician",id="Electrician">Electrician</option>
+                    <option value="Security",id="Security">Security</option>
+                    <option value="Carpenter",id="Carpenter">Carpenter</option>
+                    <option value="Tailor",id="Tailor">Tailor</option>
+                    <option value="Driver",id="Driver">Driver</option>
+                    <option value="Plumber",id="Plumber">Plumber</option>
+                    <option value="Maid",id="Maid">Maid</option>
+                    <option value="Janitor",id="Janitor">Janitor</option>
+                    <option value="Painter",id="Painter">Painter</option>
+                    <option value="HouseCleaner",id="HouseCleaner">House Cleaner</option>
+                    <option value="Labourer",id="Labourer">Labourer</option>
+                    <option value="Others",id="Others">Others</option>
+                  </select>
+        
+        
+                    <div class="text">
+                        <h1>Enter Work Description</h1>
+                     </div>
+                    <label for="descr" class="form-label">Description</label>
+                    <input type="text" class="form-control" id="descr" name="descr" >
+
+                    <div class="text">
+                        <h1>Enter Location</h1>
+                     </div>
+                    <label for="loc" class="form-label">Location</label>
+                    <input type="text" class="form-control" id="loc" name="loc" >
+
+                    
+                  </div>
+                 
+     
+              
+              
+            
+                  
+                 <button type="submit" class="btn-btn-primary">Submit</button>
+               </form>
+        </div>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>worker</title>
+    <link rel="stylesheet" href="static/postwork.css">
+    <script src="https://kit.fontawesome.com/8263f3c691.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+   
+    
+</head>
+
+<body >
+  
+
+    <nav>
+      <div class="fle main-nav" >
+          <a href="#" class="company-logo img"><img src="static\logo-no-background.png"  alt="company-logo"></a>
+          <div class="nav-links">
+              <ul class="fle">
+                  
+                  <li><a href="/clientdashboard"class="hover-link">Dashboard</a></li>
+                  <li><a href="/aboutus"class="hover-link">About Us</a></li>
+                  <li><a href="/faq"class="hover-link">FAQ's</a></li>
+                  <li><a href="/logout"class="hover-link primary-button">Log out</a></li>
+                  
+                </ul>
+          </div>
+      </div>
+  </nav>
+  
+
+    <div class="container form-container">
+        
+                  <h2>Enlist an issue/job</h2>
+                 <div class="enlist-job">
+                    <div class="job1">
+                        <label for="services" class="job-c">1. Name of the job *<a>(if more than one put in others)</a><span class="mb-3-text-muted"></span></label>
+                    </div>
+                    <div class="job-content">
+                      <form action="/postwork" method="post"> 
+    
+                      <select name="services" id="services">
+                        <option disable selected> Choose Category of Work</option> 
+                        <option value="Electrician",id="Electrician">Electrician</option>
+                        <option value="Security",id="Security">Security</option>
+                        <option value="Carpenter",id="Carpenter">Carpenter</option>
+                        <option value="Tailor",id="Tailor">Tailor</option>
+                        <option value="Driver",id="Driver">Driver</option>
+                        <option value="Plumber",id="Plumber">Plumber</option>
+                        <option value="Maid",id="Maid">Maid</option>
+                        <option value="Janitor",id="Janitor">Janitor</option>
+                        <option value="Painter",id="Painter">Painter</option>
+                        <option value="HouseCleaner",id="HouseCleaner">House Cleaner</option>
+                        <option value="Labourer",id="Labourer">Labourer</option>
+                        <option value="Others",id="Others">Others</option>
+                      </select>
+                    </div>
+                 
+                
+                   
+                    <div class="mb"  method="post" >
+                        <label>2. Description of job:*</label><br>
+                        <textarea class="expr" name="descr" id="descr" placeholder="Description" cols="50%" rows="2" style="font-size: 15px;"></textarea>
+                     </div>
+                  
+                     <button onclick="sendAlert()">Submit</button>
+                  
+                      
+                </div>
+                </div>
+                  
+                 
+                
+               </form>
+
+
+               
+        </div>
+        
+        
+  
+      
+        
+</div>
+    <script src="https://kit.fontawesome.com/2b9cdc1c9a.js" crossorigin="anonymous"></script>
+
+    <script>function sendAlert()
+      {  
+         alert("Your Form is submitted!");
+      }</script>
+    
+  </body>
+</body>
+</html>

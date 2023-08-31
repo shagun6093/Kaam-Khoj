@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        
+        <title>Rating</title>
+        <link  rel="stylesheet" href="{{worker_id}}/static/display_medicine.css">
+    </head>
+    <body>
+        <nav>
+            <div class="container flex main-nav">
+                <a href="#" class="company-logo img"><img src="static\logo-no-background.png" alt="company-logo"></a>
+                <div class="nav-links">
+                    <ul class="flex">
+                        <li><a href="/"class="hover-link">Homepage </a></li>
+                        <li><a href="/workerdashboard" class="hover-link">Dashboard </a></li>
+                        <li><a href="/aboutus"class="hover-link">About Us <i class="fa-sharp fa-solid fa-angle-down"></i></a></li>
+                        <li><a href="/logout"class="hover-link secondary-button">Logout</a></li>
+                        
+                      </ul>
+                </div>
+            </div>
+          </nav>
+        
+            <div class="section">
+<div class="header">
+    <h2>Rating</h2>
+
+</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Work ID</th>
+                            <th>Worker ID</th> 
+                            <th>Worker Name</th>
+                     
+                           
+                        
+                            <th>Description</th>
+                            
+                        
+                            <th>Rating</th>
+                     
+
+                         
+                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        {% for i in list %}
+                        <!-- <form action="/makequot" method="post"> -->
+                            <tr>
+                               
+                                <td>{{i.work_id}}</td>
+                                <td>{{i.worker_id}}</td> 
+                                <td>{{i.worker_name}}</td>
+                             
+                              
+                                <td>{{i.descr}}</td>
+                            
+                                <td>{{i.rating}}</td>
+                         
+                           
+                                    
+                       
+
+                            </tr>
+                     
+                        {% endfor %}
+                    
+                    </tbody>
+                </table>
+<!-- 
+                <div class="text">
+                    <h1>Enter Quotation</h1>
+                 </div>
+                <label for="quot" class="form-label">Location</label>
+                <input type="text" class="form-control" id="loc" name="loc" > -->
+
+            </div>
+        </div>
+    </body>
+</html>

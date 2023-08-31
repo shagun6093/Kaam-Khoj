@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="static/display_medicine.css" rel="stylesheet">
+        <title>RECEIVED QUOTATIONS</title>
+    </head>
+    <body>
+        <nav>
+            <div class="container flex main-nav">
+                <a href="#" class="company-logo img"><img src="static\logo-no-background.png" alt="company-logo"></a>
+                <div class="nav-links">
+                    <ul class="flex">
+                        <li><a href="/"class="hover-link">Homepage </a></li>
+                        <li><a href="/clientdashboard" class="hover-link">Dashboard </a></li>
+                        <li><a href="/faq" class="hover-link">FAQ </a></li>
+                        <li><a href="/aboutus"class="hover-link">About Us <i class="fa-sharp fa-solid fa-angle-down"></i></a></li>
+                        <li><a href="/logout"class="hover-link primary-button">Log out</a></li>
+                        
+                      </ul>
+                </div>
+            </div>
+          </nav>
+        
+            <div class="section">
+<div class="header">
+    <h2>RECEIVED QUOTATIONS</h2>
+
+</div>
+                <table>
+                    <thead>
+                        <tr>
+
+                            <th>Work ID</th>
+                            <th>Worker ID</th>
+                            <th>Worker Name</th>
+                            <th>Quotation Amount</th>
+                            <th>Description</th>
+                            <th>Profile</th>
+                             
+                           
+                            <th>Accept</th>
+                         
+                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                        {% for i in list %}
+                        <form action="/updatestatus" method="post">
+                            <tr >
+                                <td ><input type="text"  class="form-control" id="worker_id" name="worker_id"   value="{{i.worker_id}}"
+                                    readonly ></td>
+                                    <td><input type="text" class="form-control " id="work_id" name="work_id"   value="{{i.work_id}}"
+                                        readonly ></td>
+                                <td>{{i.worker_name}}</td>
+                                <td>{{i.quot_amount}}</td>
+
+
+                                <td><a href="/rating/{{i.worker_id}}">Click Here</a></td> 
+                                <td>{{i.descr}}</td>
+                               
+                                <td><button type="submit" class="btn-btn-primary">Accept</button></td>
+                                </tr>
+                            </form>    
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

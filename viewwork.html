@@ -1,0 +1,89 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="static/display_medicine.css" rel="stylesheet">
+        <title>AVAILABLE WORK</title>
+    </head>
+    <body>
+        <nav>
+            <div class="container flex main-nav">
+                <a href="#" class="company-logo img"><img src="static\logo-no-background.png" alt="company-logo"></a>
+                <div class="nav-links">
+                    <ul class="flex">
+                        <li><a href="homepage.html"class="hover-link">Homepage </a></li>
+                        <li><a href="/workerdashboard" class="hover-link">Dashboard </a></li>
+                        <li><a href="about-us.html"class="hover-link">About Us <i class="fa-sharp fa-solid fa-angle-down"></i></a></li>
+                        <li><a href="/logout"class="hover-link secondary-button">Logout</a></li>
+                     
+                      </ul>
+                </div>
+            </div>
+          </nav>
+        
+            <div class="section">
+<div class="header">
+    <h2>WORK DETAILS</h2>
+
+</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Work ID</th>
+                            <th>Client Name</th>
+                            <th>Cateogory</th>
+                            <th>Description</th>
+                            <th>Description In Hindi</th>
+                            <th>Description In Marathi</th>
+                          
+                            <th>Add Quotation</th>
+                            <th>Submit</th>
+
+                         
+                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        {% for i in list %}
+                        <form action="/makequot" method="post">
+                            <tr>
+                               
+                                <td><input type="text" class="form-control" id="work_id" name="work_id"   value="{{i.work_id}}"
+                                    readonly ></td>
+                                <td>{{i.client_name}}</td>
+                                <td>{{i.services}}</td>
+                                <td>{{i.descr}}</td>
+                                <td>{{i.descr_hindi}}</td>
+                                <td>{{i.descr_marathi}}</td>
+                            
+                                <td>  <input type="text" class="form-control" id="quot" name="quot" ></td>
+                                <td><button type="submit" class="btn-btn-primary">Submit</button></td>
+                                    
+                       
+
+                            </tr>
+                        </form>
+                        {% endfor %}
+                    
+                    </tbody>
+                </table>
+<!-- 
+                <div class="text">
+                    <h1>Enter Quotation</h1>
+                 </div>
+                <label for="quot" class="form-label">Location</label>
+                <input type="text" class="form-control" id="loc" name="loc" > -->
+
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,454 @@
+<!--
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="static/display_medicine.css" rel="stylesheet">
+        <title>Medicine Details</title>
+    </head>
+    <body>
+        <nav>
+            <div class="container flex main-nav">
+                <a href="#" class="company-logo img"><img src="static/logofinal.png" alt="company-logo"></a>
+                <div class="nav-links">
+                    <ul class="flex">
+                        <li><a href="homepage.html"class="hover-link">Homepage </a></li>
+                        <li><a href="/workerdashboard" class="hover-link">Dashboard </a></li>
+                        <li><a href="about-us.html"class="hover-link">About Us <i class="fa-sharp fa-solid fa-angle-down"></i></a></li>
+                        <li><a href="#"class="hover-link secondary-button">Sign In</a></li>
+                        <li><a href="#"class="hover-link primary-button">Sign Up</a></li>
+                      </ul>
+                </div>
+            </div>
+          </nav>
+        
+            <div class="section">
+<div class="header">
+    <h2>MEDICINE DETAILS</h2>
+
+</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>client</th>
+                            <th>Age</th>
+                            <th>Contact</th>
+                            <th>Gender</th>
+                            <th>Prescription</th>
+                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                        {% for i in list %}
+                            <tr>
+                                <td>{{i.name}}</td>
+                                <td>{{i.age}}</td>
+                                <td>{{i.contact}}</td>
+                                <td>{{i.gender}}</td>
+                                <td> <a href="client_details?id={{i.id}}" >View Prescription</a></td>
+                                <td> <a href="client_report?id={{i.id}}" >View Report</a></td>
+                              
+                                
+                               
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+     /* nav bar */
+     @import url('https://fonts.googleapis.com/css2?family=Acme&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+    --primary-text-color: #171717;
+    --secondary-text-color: #E46600;
+    --accent-color: #FFD12D;
+    --accent-color-dark: #6B5102;
+    --padding-inline-section: 20px;
+    --background-color: #FFFFFF;
+}
+
+body {
+  font-family: 'Poppins',sans-serif;
+  
+  background: linear-gradient(to bottom, rgba(228, 102, 0, 0.8) 0%, rgba(255, 209, 45,0.7) 100%) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+  padding: 10px;
+}
+p {
+  font-family: 'Roboto',sans-serif;
+  font-size: 1.25rem;
+  color: var(--secondary-text-color);
+  line-height: 1.8rem;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+ul {
+  list-style: none;
+}
+/* utility classes */
+.fle .user-image {
+  display: flex;
+  align-items: center;
+   height: 200px;
+   width: 200px;
+}
+/* .fle{
+  display: flex;
+  align-items: center;
+   height: 200px;
+   width: 200px;
+} */
+
+
+/* nav bar */
+.main-nav {
+  margin-top: 5px;
+  justify-content: space-between;
+}
+.hover-link {
+  color: var(--accent-color-dark);
+}
+.hover-link:hover{
+  color: var(--secondary-text-color);
+  transition-property: 0.2s ease-out;
+}
+.primary-button {
+  background-color: var(--accent-color);
+  border-radius: 6px;
+  font-weight: bold;
+  padding: 12px 24px;
+  box-shadow: 0 0 2px var(--secondary-text-color);
+  transition: 0.2s ease-out;
+}
+.primary-button:hover{
+  background-color: var(--secondary-text-color);  
+   color: var(--accent-color);
+}
+.secondary-button{
+  border: 0.5px solid var(--accent-color-dark);
+  border-radius: 6px;
+  font-weight: bold;
+  color: var(--accent-color-dark);
+  padding: 12px 24px;
+  transition: 0.2s ease-out;
+}
+.secondary-button:hover {
+    background-color: var(--secondary-text-color);
+    color: var(--accent-color);
+}
+.main-nav {
+    box-shadow: 0px 2px 3px var(--accent-color-dark);
+    padding: 10px;
+    
+    
+    background-color: #FFFFFF;
+}
+.company-logo img {
+  width: 100px;
+}
+.nav-links {
+  /* flex-basis: 730px; */
+  justify-content: space-between;
+  font-weight:550;
+  font-size: 20px;
+}
+.nav-links ul{
+  justify-content: end;
+  gap: 30px;
+}
+  
+       
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+
+    
+      /* CSS for button container */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      gap: 50px;
+    }
+    .buttontext h4{
+      font-family: 'Poppings';
+     font-size: 18px;
+      color: var(--secondary-text-color);
+}
+    
+    
+
+    .rectangle-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 70px;
+      
+
+    }
+    .rect{
+       margin-left: 50px;
+      color: var(--secondary-text-color);
+      width: 700px;
+      height: 300px;
+      background:var(--background-color);
+      border-radius: 40px;
+      box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+      display: flex;
+        justify-content: center;
+        align-items: left;
+      
+    }
+
+    .textcontent{
+      margin-top: 30px;
+      margin-right: 60px;
+  
+      
+    }
+    .textcontent h3{
+      font-family:poppings ;
+    }
+    .checked {
+    color: #6B5102;
+    }
+    .unchecked{
+        color: white;
+    }
+    
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 100px;
+      /* background: linear-gradient(180deg, #E46600 0%, #EDC63B 78.39%); */
+      background-color: var(--background-color);
+      border-radius:6px;
+      font-size: 24px;
+      box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .button:hover{
+      background:var(--accent-color); 
+      transition: 0.2s ease-out;
+       }
+
+   
+
+    .user-image{
+        width:50%;
+        height:100%;
+        border-radius: 10%;
+        margin-left: 50px;
+        
+    }
+   
+    /* footer section */
+    footer {
+  padding-block: 80px;
+  background-color:var(--primary-text-color) ;
+  font-weight:bold;
+  margin-top: 150px;
+}
+.link-coloumn {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px
+}
+.footer-container{
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-left:20px ;
+  margin-right:20px ;
+}
+.footer-link {
+  color: var(--secondary-text-color);
+}
+.footer-link:hover {
+  color: var(--accent-color-dark);
+} 
+h4 {
+  font-size: 20px;
+  color: var(--accent-color);
+}
+.footer-text {
+  font-weight: 500;
+  margin-top: 10px;
+  padding-top: 5px;
+}
+
+
+
+  </style>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+  <!-- Navigation Bar -->
+   <!-- Navigation Bar -->
+   <nav>
+    <div class="flex main-nav" style="width: 100%; margin-top: 0px;">
+        <a href="#" class="company-logo img"><img src="static\logo-no-background.png"  alt="company-logo"></a>
+        <div class="nav-links">
+            <ul class="flex">
+                <li><a href="/"class="hover-link">Home</a></li>
+                <li><a href="/aboutus"class="hover-link">About Us</a></li>
+                <li><a href="/clientdashboard"class="hover-link">Dashboard</a></li>
+                <li><a href="/faq"class="hover-link">FAQ's</a></li>
+                <li><a href="/logout"class="hover-link primary-button">Log out</a></li>
+               
+              </ul>
+        </div>
+    </div>
+</nav>
+  
+  
+ 
+    
+  
+  
+  <!-- rectangle box -->
+  <div class="rectangle-container flex">
+
+    <div class="rect flex" style="flex-direction: column; gap:20px">
+      <div class="flex" style="flex-direction: row;">
+        <!-- photo section -->
+        <div class="fle flex" >
+            <img src="static\woman.jpg" class="user-image" alt="Image">
+        </div>
+
+        <!-- text section -->
+        <div class="textcontent">
+          <div class="flex" style="flex-direction: row;">
+              <div class="nb" style="width: 150px;">
+                 <h3>Name:  </h3>
+              </div>
+              <div class="box">
+                {{name}}
+            <!-- <label  id="lblName" cols="10"  rows="10" style="height: 40px; width: 200px; border-radius: 10px;color: black;">Shagun</label> -->
+          </div>
+          </div>
+  
+      <div class="flex" style="flex-direction:row;">
+        <div class="nb" style="width: 150px;">
+          <h3>Gender:</h3>
+        </div>
+         <div>
+          {{gender}}
+          </div>
+        </div>
+      <div class="flex" style="flex-direction:row;">
+        <div class="nb" style="width: 150px;">
+          <h3>Phone No:</h3>
+        </div>
+         <div>
+          {{contact}}
+          </div>
+        </div>
+      <div class="flex" style="flex-direction:row;">
+        <div class="nb" style="width: 150px;">
+          <h3>Address :</h3>
+        </div>
+         <div>
+          {{address}}
+          </div>
+        </div>
+  
+        
+     </div>
+        </div>
+        </div>
+    </div>
+       
+  
+  
+     
+
+
+   
+      
+    
+      <!-- <span><br><br><br>
+        <h3> &nbsp Name : </h3>
+        <textarea name="" id="" cols="10" rows="10"></textarea>
+        <br>
+        <h3> &nbsp Phone No : 123456789</h3>
+        <br>
+        <h3>&nbsp Ratings :
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star  unchecked"></span>
+            <span class="fa fa-star unchecked"></span>
+        </h3>
+      </span> -->
+    
+  <!-- Button Container -->
+ 
+  <!-- footer -->
+  <!-- Footer Section -->
+  <footer>
+    <div class="container flex footer-container">
+      <a href="#" class="company-logo">
+        <img src="static\logo-no-background.png" alt="company-logo">
+        <p class="footer-text">Kaam Khoj is a platform for Mumbai <br>workers connect with Hirers<br>all across Mumbai to find jobs.</p>
+        <p class="footer-text">काम खोज हे मुंबईकरांना नोकरी शोधण्यासाठी <br>संपूर्ण मुंबईतील मालकांशी संपर्क साधण्याचे <br>एक व्यासपीठ आहे.<br> </p>
+        <p class="footer-text">काम खोज मुंबईकरों के लिए नौकरी खोजने <br> के लिए पूरे मुंबई के नियोक्ताओं से <br>जुड़ने का एक मंच है।</p>
+      </a>
+      <div class="link-coloumn flex">
+        <h4>Pages</h4>
+        <a href="homepage.html" class="hover-link footer-link">Home, घर, घर</a>
+        <a href="about-us.html" class="hover-link footer-link">About Us , आमच्याबद्दल ,हमारे बारे में</a>
+        <a href="faqs.html" class="hover-link footer-link">FAQs, प्रश्नोत्तरे,सवाल और जवाब</a>
+        <a href="homepage.html" class="hover-link footer-link">How It Works, हे कसे काम करते, ये कैसे काम करता है</a>
+      </div>
+
+      <div class="link-coloumn flex">
+        <h4>Made By</h4>
+        <a href="https://github.com/ayeshanagdawala/" class="hover-link footer-link">Ayesha Nagdawala</a>
+        <a href="https://github.com/meetalik8/" class="hover-link footer-link">Meetali Kapse</a>
+        <a href="https://github.com/mamta137/" class="hover-link footer-link">Mamta Gupta</a>
+        <a href="https://github.com/shagun6093/" class="hover-link footer-link">Shagun Gupta</a>
+      </div>
+
+    </div>
+  </footer>
+</body>
+</html>

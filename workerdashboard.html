@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/workerdashboard.css">
+    <title>worker dashboard</title>
+</head>
+<body>
+    <nav>
+        <div class="fle main-nav" >
+            <a href="#" class="company-logo img"><img src="static\logo-no-background.png"  alt="company-logo"></a>
+            <div class="nav-links">
+                <ul class="fle">
+                    <li><a href="/"class="hover-link">Home</a></li>
+                   
+                    <li><a href="/aboutus"class="hover-link">About Us</a></li>
+                    <li><a href="/faq"class="hover-link">FAQ's</a></li>
+                    <li><a href="/logout"class="hover-link primary-button">Log Out</a></li>
+                  
+                  </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="frame">
+            <div class="profile">
+              <div class="circle-container ">
+                <img src="myphoto.jpeg" class="circle-image" alt="Image" onclick="window.location.href =  '#';">
+              </div>
+              <div class="header-text" >
+                <h2>Worker Dashboard</h2>
+              </div>
+
+
+
+
+            </div>
+            <div class="cards flex" >
+                <div class="card1"> 
+                      <div class="button" type="button" onclick="window.location.href='/viewworkers'">
+                        <span>
+                            <h2>WORKER'S PROFILE</h2>
+                            
+                        </span>
+
+                      </div>
+                </div>
+                <div class="card2">
+                    <div class="button" type="button" onclick="window.location.href='/viewwork'" >
+                        <span>
+                            <h2>VIEW WORK</h2>
+
+                        </span>
+
+                      </div>
+
+                </div>
+                <div class="card2">
+                    <div class="button" type="button" onclick="window.location.href='/myworkw'">
+                        <span>
+                            <h2> MY WORK </h2>
+
+                        </span>
+
+                      </div>
+
+                </div>
+                <div class="card2">
+                    <div class="button" type="button" onclick="window.location.href='/rating/{{worker_id}}'">
+                        <span>
+                            <h2>RATINGS </h2>
+
+                        </span>
+
+                      </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section -->
+  <footer>
+    <div class="con flex footer-container">
+      <a href="#" class="company-logo">
+        <img src="static\logo-no-background.pngg" alt="company-logo">
+        <p class="footer-text">Kaam Khoj is a platform for Mumbai <br>workers connect with Hirers<br>all across Mumbai to find jobs.</p>
+        <p class="footer-text">काम खोज हे मुंबईकरांना नोकरी शोधण्यासाठी <br>संपूर्ण मुंबईतील मालकांशी संपर्क साधण्याचे <br>एक व्यासपीठ आहे.<br> </p>
+        <p class="footer-text">काम खोज मुंबईकरों के लिए नौकरी खोजने <br> के लिए पूरे मुंबई के नियोक्ताओं से <br>जुड़ने का एक मंच है।</p>
+      </a>
+      <div class="link-coloumn flex">
+        <h4>Pages</h4>
+        <a href="homepage.html" class="hover-link footer-link">Home, घर, घर</a>
+        <a href="about-us.html" class="hover-link footer-link">About Us , आमच्याबद्दल ,हमारे बारे में</a>
+        <a href="faqs.html" class="hover-link footer-link">FAQs, प्रश्नोत्तरे,सवाल और जवाब</a>
+        <a href="homepage.html" class="hover-link footer-link">How It Works, हे कसे काम करते, ये कैसे काम करता है</a>
+      </div>
+
+      <div class="link-coloumn flex">
+        <h4>Made By</h4>
+        <a href="https://github.com/ayeshanagdawala/" class="hover-link footer-link">Ayesha Nagdawala</a>
+        <a href="https://github.com/meetalik8/" class="hover-link footer-link">Meetali Kapse</a>
+        <a href="https://github.com/mamta137/" class="hover-link footer-link">Mamta Gupta</a>
+        <a href="https://github.com/shagun6093/" class="hover-link footer-link">Shagun Gupta</a>
+      </div>
+
+    </div>
+  </footer>
+</body>
+</html>
